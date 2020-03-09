@@ -2359,6 +2359,7 @@ h3+.price {
   width: 940px;
   height: 446px;
   margin-left: -470px;
+  background-image: url(../img/map.png);
 
   box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
 }

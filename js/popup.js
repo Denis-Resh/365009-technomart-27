@@ -1,3 +1,5 @@
+/*Форма*/
+
 var letter = document.querySelector(".letter-button");
 
 var popup = document.querySelector(".modal");
@@ -56,6 +58,31 @@ window.addEventListener("keydown", function (evt) {
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
       popup.classList.remove("modal-error");
+    }
+  }
+});
+
+/*Карта*/
+
+var minimap = document.querySelector(".minimap");
+
+var mapPopup = document.querySelector(".modal-map");
+var mapClose = mapPopup.querySelector(".modal-close");
+
+minimap.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+mapClose.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("modal-show")) {
+      mapPopup.classList.remove("modal-show");
     }
   }
 });
